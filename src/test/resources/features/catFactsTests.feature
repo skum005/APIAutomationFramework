@@ -11,4 +11,4 @@ Feature: As a user I should be able to interact with Cat Facts API
   Scenario: Get Cat Breeds
     Given User has access to cat facts API
     When User queries for a cat breeds with a limit of 10
-    Then a cat breeds should be returned
+    Then cat breeds should be returned

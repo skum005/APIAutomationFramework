@@ -1,4 +1,4 @@
-package payloads;
+package payloads.catfacts;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

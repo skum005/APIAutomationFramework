@@ -4,7 +4,6 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import utils.RestClient;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class CatFactsAPI extends RestClient {
@@ -27,13 +26,6 @@ public class CatFactsAPI extends RestClient {
                 .setQueryParams(params)
                 .setHeaders(getJSONContentTypeHeader())
                 .submitRequest(Method.GET);
-    }
-
-    public static void main(String[] args) {
-        CatFactsAPI catFactsAPI = new CatFactsAPI("https://catfact.ninja");
-        Map<String, String> queryParams = new HashMap<>(Map.of("max_length", "100"));
-        Response response = catFactsAPI.getCatFact("/fact", queryParams);
-        response.prettyPrint();
     }
 
 }

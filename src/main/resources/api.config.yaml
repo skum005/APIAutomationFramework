@@ -1,4 +1,4 @@
-defaultEnv: uat
+defaultEnv: sit
 environments:
   sit:
     cat-facts-api:
@@ -6,6 +6,10 @@ environments:
       endpoints:
         facts: /fact
         breeds: /breeds
+    human-resources-api:
+      base_url: https://reqres.in
+      endpoints:
+        create_employee: /api/users
   uat:
     cat-facts-api:
       base_url: https://catfact.ninja

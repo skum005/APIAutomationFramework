@@ -9,7 +9,7 @@ import microservices.CatFactsAPI;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import payloads.CatFactResponse;
+import payloads.catfacts.CatFactResponse;
 import utils.TestContext;
 
 import java.util.HashMap;
@@ -62,7 +62,7 @@ public class CatFactsAPIStepDefinitions extends BaseStepDefinitions {
     }
 
 
-    @Then("a cat breeds should be returned")
+    @Then("cat breeds should be returned")
     public void validateCatBreds() {
         Assert.assertNotNull(scenarioContext.getResponse(), "Response is not captured in Scenario Context");
         Allure.addAttachment(scenarioContext.getResponse().body().asPrettyString(), "Cat breeds response body");
