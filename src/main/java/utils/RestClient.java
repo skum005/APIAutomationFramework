@@ -15,7 +15,7 @@ public class RestClient {
 
     public RestClient setConfig(String baseURL, String basePath) {
         try {
-            requestSpecification =  given().baseUri(baseURL).basePath(basePath);
+            requestSpecification =  given().baseUri(baseURL).basePath(basePath).log().all();
             return this;
         } catch (Exception exception) {
             exception.printStackTrace();
