@@ -1,0 +1,14 @@
+defaultEnv: uat
+environments:
+  sit:
+    cat-facts-api:
+      base_url: https://catfact.ninja
+      endpoints:
+        facts: /fact
+        breeds: /breeds
+  uat:
+    cat-facts-api:
+      base_url: https://catfact.ninja
+      endpoints:
+        facts: /fact
+        breeds: /breeds
